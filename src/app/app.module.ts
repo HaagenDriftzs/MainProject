@@ -7,6 +7,11 @@ import {AuthenticationSectionComponent} from './authenticationSection/authentica
 import { ShoppingListItemsComponent } from './shopping-list-items/shopping-list-items.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
+import { ProductDetailComponent } from './products/product-detail/product-detail.component';
+import { ProductItemComponent } from './products/product-list/product-item/product-item.component';
+import { ShoppingEditComponent } from './shopping-list-items/shopping-edit/shopping-edit.component';
+import {FormsModule} from '@angular/forms';
+import {AppRoutingModule} from './appRouting.module';
 
 @NgModule({
   declarations: [
@@ -15,10 +20,14 @@ import { ProductListComponent } from './products/product-list/product-list.compo
     AuthenticationSectionComponent,
     ShoppingListItemsComponent,
     ProductsComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductDetailComponent,
+    ProductItemComponent,
+    ShoppingEditComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
