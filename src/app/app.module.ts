@@ -10,8 +10,9 @@ import { ProductListComponent } from './products/product-list/product-list.compo
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { ProductItemComponent } from './products/product-list/product-item/product-item.component';
 import { ShoppingEditComponent } from './shopping-list-items/shopping-edit/shopping-edit.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './appRouting.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,9 @@ import {AppRoutingModule} from './appRouting.module';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

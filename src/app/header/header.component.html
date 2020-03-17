@@ -1,18 +1,22 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand">Products</a>
+      <a class="navbar-brand">Products</a>
     </div>
 
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li routerLinkActive="active"><a  routerLink="/authenticationSection">Authentication</a></li>
-        <li routerLinkActive="active"><a  routerLink="/products">Products</a></li>
-        <li routerLinkActive="active"><a  routerLink="/shopping-list-items">Shopping List</a></li>
+        <li routerLinkActive="active" *ngIf="!authenticated"><a  routerLink="/authenticationSection">Authentication</a></li>
+        <li routerLinkActive="active" *ngIf="authenticated"><a  routerLink="/products">Products</a></li>
+        <li routerLinkActive="active" *ngIf="authenticated"><a  routerLink="/shopping-list-items">Shopping List</a></li>
+        <li routerLinkActive="active" *ngIf="authenticated"><a href="#">Graphs</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+        <li *ngIf="authenticated">
+          <a style="cursor: pointer;" (click)="logoutFunc()">Logout</a>
+        </li>
+        <li class="dropdown" *ngIf="authenticated">
+          <a href="#" class="dropdown-toggle" role="button">Manage<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a  href="#">Authentication</a></li>
             <li><a  href="#">Authentication</a></li>
