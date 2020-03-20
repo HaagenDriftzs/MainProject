@@ -1,1 +1,22 @@
-<p>product-list works!</p>
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Product</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <a href="#" class="list-group-item clearfix" *ngFor="let product of products">
+      <div class="pull-left">
+        <h4 class="list-group-item-heading">{{product.name}}</h4>
+        <h5 class="list-group-item-heading">{{product.productId}}</h5>
+        <h5 class="list-group-item-heading">{{product.price}}</h5>
+      </div>
+      <span class="pull-right">
+        <img [src]="product.imagePath" alt="{{product.name}}" class="img-responsive" style="max-height: 50px;">
+      </span>
+    </a>
+    <app-product-item></app-product-item>
+  </div>
+</div>
+

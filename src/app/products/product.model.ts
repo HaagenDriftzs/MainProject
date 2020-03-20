@@ -7,14 +7,16 @@ import {ProductProperty} from '../shared/productProperty.model';
 export class Product {
   public productId: string;
   public name: string;
+  public price: string;
   public imagePath: string;
-  public productProperties: ProductProperty[];
+  /*public productProperties: ProductProperty[];*/
 
-  constructor(productId: string, name: string, imagePath: string, productProperties: ProductProperty[] ) {
+  constructor(productId: string, name: string, price: string, imagePath: string/*productProperties: ProductProperty[]*/ ) {
     this.productId = productId;
     this.name = name;
+    this.price = price;
     this.imagePath = imagePath;
-    this.productProperties = productProperties;
+    /*this.productProperties = productProperties;*/
   }
 
 }
