@@ -1,1 +1,10 @@
-<p>product-item works!</p>
+<a href="#" class="list-group-item clearfix" (click)="onSelected()">
+  <div class="pull-left">
+    <h4 class="list-group-item-heading">{{product.name}}</h4>
+    <h5 class="list-group-item-heading">{{product.productId}}</h5>
+    <h5 class="list-group-item-heading">{{product.price}}</h5>
+  </div>
+  <span class="pull-right">
+        <img [src]="product.imagePath" alt="{{product.name}}" class="img-responsive" style="max-height: 50px;">
+      </span>
+</a>

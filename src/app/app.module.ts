@@ -11,6 +11,7 @@ import { ProductDetailComponent } from './products/product-detail/product-detail
 import { ProductItemComponent } from './products/product-list/product-item/product-item.component';
 import { ShoppingEditComponent } from './shopping-list-items/shopping-edit/shopping-edit.component';
 import { AdminComponent } from './admin/admin.component';
+import { AdminProductComponent } from './admin/admin-product/admin-product.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './appRouting.module';
 import {HttpClientModule} from '@angular/common/http';
@@ -26,7 +27,8 @@ import {HttpClientModule} from '@angular/common/http';
     ProductDetailComponent,
     ProductItemComponent,
     ShoppingEditComponent,
-    AdminComponent
+    AdminComponent,
+    AdminProductComponent
   ],
   imports: [
     BrowserModule,

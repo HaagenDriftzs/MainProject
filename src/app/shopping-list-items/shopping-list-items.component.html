@@ -1,7 +1,13 @@
 <div class="row">
-  <div class="col-md-6">
-    <app-shopping-edit></app-shopping-edit>
+  <div class="col-xs-10">
+    <app-shopping-edit (propertyAdded)="onProductAdded($event)"></app-shopping-edit>
     <hr>
-    <p>The list</p>
+    <ul>
+      <a class="list-group-item" style="cursor: pointer" *ngFor="let productProperty of productProperties">
+        {{productProperty.name}}
+        ({{productProperty.amount}})
+      </a>
+    </ul>
   </div>
 </div>
+
