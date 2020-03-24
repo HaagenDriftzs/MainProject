@@ -17,9 +17,9 @@ export class AuthenticationSectionComponent {
     constructor(private authenticationSectionService: AuthenticationSectionService, private router: Router) {
     }
 
-    switchMode() {
+    /*switchMode() {
       this.loginMode = !this.loginMode;
-    }
+    }*/
 
     onSubmit(form: NgForm) {
       if (!form.valid) {
@@ -35,7 +35,7 @@ export class AuthenticationSectionComponent {
       if (this.loginMode) {
         authenticationObserver = this.authenticationSectionService.login(email, password);
       } else {
-        authenticationObserver = this.authenticationSectionService.signup(email, password);
+        console.log(this.error);
       }
 
       authenticationObserver.subscribe(resData => {

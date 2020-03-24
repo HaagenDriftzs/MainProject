@@ -80,7 +80,7 @@ export class AuthenticationSectionService {
   automaticallyLogout(duration: number) {
     this.timeDuration = setTimeout(() => {
       this.logout();
-    }, 90000);
+    }, 900000);
   }
 
   private authenticationHandler(email: string, localId: string, token: string, expiresIn: number) {

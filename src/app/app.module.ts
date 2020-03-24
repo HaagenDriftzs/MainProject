@@ -32,6 +32,7 @@ import { GraphSectionComponent } from './admin/graph-section/graph-section.compo
 import { StatisticComponent } from './admin/graph-section/statistic/statistic.component';
 import { PieGraphComponent } from './admin/graph-section/pie-graph/pie-graph.component';
 import { BarGraphComponent } from './admin/graph-section/bar-graph/bar-graph.component';
+import { AdminSignupComponent } from './admin/admin-signup/admin-signup.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { BarGraphComponent } from './admin/graph-section/bar-graph/bar-graph.com
     GraphSectionComponent,
     StatisticComponent,
     PieGraphComponent,
-    BarGraphComponent
+    BarGraphComponent,
+    AdminSignupComponent
   ],
   imports: [
     BrowserModule,

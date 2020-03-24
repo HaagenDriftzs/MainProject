@@ -13,6 +13,7 @@ import {GraphSectionComponent} from './admin/graph-section/graph-section.compone
 import {StatisticComponent} from './admin/graph-section/statistic/statistic.component';
 import {BarGraphComponent} from './admin/graph-section/bar-graph/bar-graph.component';
 import {PieGraphComponent} from './admin/graph-section/pie-graph/pie-graph.component';
+import {AdminSignupComponent} from './admin/admin-signup/admin-signup.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/products', pathMatch: 'full'},
@@ -35,13 +36,14 @@ const appRoutes: Routes = [
       }
     ]
   },
-  { path: 'shopping-list-items', component: ShoppingListItemsComponent },
+  { path: 'shopping-list-items', component: ShoppingListItemsComponent, canActivate: [AuthenticationSectionGuard] },
   { path: 'authenticationSection', component: AuthenticationSectionComponent },
-  { path: 'adminSection', component: AdminComponent},
-  { path: 'graph-section', component: GraphSectionComponent },
-  { path: 'statistic', component: StatisticComponent},
-  { path: 'bar-graph', component: BarGraphComponent},
-  { path: 'pie-graph', component: PieGraphComponent},
+  { path: 'adminSection', component: AdminComponent, canActivate: [AuthenticationSectionGuard]},
+  { path: 'graph-section', component: GraphSectionComponent, canActivate: [AuthenticationSectionGuard] },
+  { path: 'statistic', component: StatisticComponent, canActivate: [AuthenticationSectionGuard]},
+  { path: 'bar-graph', component: BarGraphComponent, canActivate: [AuthenticationSectionGuard]},
+  { path: 'pie-graph', component: PieGraphComponent, canActivate: [AuthenticationSectionGuard]},
+  { path: 'admin-signup', component: AdminSignupComponent, canActivate: [AuthenticationSectionGuard]},
   {
     path: 'admin-edit',
     component: ProductsComponent,

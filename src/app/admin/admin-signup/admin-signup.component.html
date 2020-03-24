@@ -1,3 +1,8 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-primary" type="submit" routerLinkActive="active" routerLink="/adminSection">Admin</button>
+  </div>
+</div>
 <div class="col-xs-12 col-md-6 col-md-offset-3">
   <div class="alert alert-danger" *ngIf="error">
     <p>{{ error }}</p>
@@ -12,9 +17,9 @@
       <input type="password" id="password" class="form-control" ngModel name="password" required minlength="6">
     </div>
     <div>
-      <button class="btn btn-primary" type = "submit" [disabled]="!authForm.valid">{{ loginMode ? 'Login' : 'Sign Up'}}</button>
-      <!--<button class="btn btn-primary"(click)="switchMode()" type="button">Switch to {{ loginMode ? 'Sign Up' : 'Login'}}</button>-->
+      <button class="btn btn-primary" type = "submit" [disabled]="!authForm.valid">Sign-up</button>
     </div>
   </form>
 </div>
+
 
