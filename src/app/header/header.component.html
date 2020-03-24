@@ -16,10 +16,10 @@
           <a style="cursor: pointer;" (click)="logoutFunc()">Logout</a>
         </li>
         <li class="dropdown" *ngIf="authenticated">
-          <a href="#" class="dropdown-toggle" role="button">Manage<span class="caret"></span></a>
+          <a class="dropdown-toggle" role="button">Manage<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a  href="#">Authentication</a></li>
-            <li><a  href="#">Authentication</a></li>
+            <li><a  style="cursor: pointer;" >Save Data</a></li>
+            <li><a  style="cursor: pointer;">Fetch Data</a></li>
           </ul>
         </li>
       </ul>

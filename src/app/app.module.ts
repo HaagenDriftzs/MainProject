@@ -11,22 +11,22 @@ import { ProductDetailComponent } from './products/product-detail/product-detail
 import { ProductItemComponent } from './products/product-list/product-item/product-item.component';
 import { ShoppingEditComponent } from './shopping-list-items/shopping-edit/shopping-edit.component';
 import { AdminComponent } from './admin/admin.component';
+import { ProductFunctionalityComponent } from './admin/productFunctionality/productFunctionality.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './appRouting.module';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {ProductStartComponent} from './products/productStart/productStart.component';
+import {ProductEditComponent} from './products/product-edit/product-edit.component';
+import {ShoppingListService} from './shopping-list-items/shopping-list.service';
+import {ProductService} from './products/product.service';
+import {AdminEditComponent} from './admin/admin-edit/admin-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AuthenticationSectionComponent,
-    ShoppingListItemsComponent,
-    ProductsComponent,
-    ProductListComponent,
-    ProductDetailComponent,
-    ProductItemComponent,
-    ShoppingEditComponent,
-    AdminComponent
+    AdminEditComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +35,8 @@ import {HttpClientModule} from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
