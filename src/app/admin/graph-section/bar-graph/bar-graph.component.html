@@ -1,0 +1,17 @@
+<h1>Monthly Login Times (Hours Over 4 Weeks)</h1>
+<div class="control-section">
+  <div align='center'>
+    <ejs-chart style='display:block;' [chartArea]='chartArea' [width]='width' align='center' id='chartcontainer' [primaryXAxis]='primaryXAxis'
+               [primaryYAxis]='primaryYAxis' [title]='title' [tooltip]='tooltip' (load)='load($event)'>
+      <e-series-collection>
+        <e-series [dataSource]='data' type='Column' xName='x' yName='y' name='Thomas Killeen' width=2 [marker]='marker'> </e-series>
+        <e-series [dataSource]='data1' type='Column' xName='x' yName='y' name='Bob Cornhole' width=2 [marker]='marker'> </e-series>
+        <e-series [dataSource]='data2' type='Column' xName='x' yName='y' name='Joe Bloggs' width=2 [marker]='marker'> </e-series>
+        <e-series [dataSource]='data3' type='Column' xName='x' yName='y' name='Jim Henson' width=2 [marker]='marker'> </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
+</div>
+<div>
+  <button class="btn btn-primary" type="submit" routerLinkActive="active" routerLink="/graph-section">Graphs</button>
+</div>

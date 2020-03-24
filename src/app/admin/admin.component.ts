@@ -10,10 +10,4 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class AdminComponent {
 
-/*  constructor(private router: Router, private route: ActivatedRoute) {
-  }
-
-  onNewProduct() {
-    this.router.navigate(['productFunctionality'], {relativeTo: this.route});
-  }*/
  }

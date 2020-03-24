@@ -1,0 +1,11 @@
+<h1>Payment Type</h1>
+<ejs-accumulationchart [title]='chartTitle' [legendSettings]='legend' >
+  <e-accumulation-series-collection>
+    <e-accumulation-series type='Pie' [dataSource]='data' xName='name' yName='value' [dataLabel]='chartLabel'>
+    </e-accumulation-series>
+  </e-accumulation-series-collection>
+</ejs-accumulationchart>
+<div>
+  <button class="btn btn-primary" type="submit" routerLinkActive="active" routerLink="/graph-section">Graphs</button>
+</div>
+

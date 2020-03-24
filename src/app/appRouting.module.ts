@@ -5,11 +5,14 @@ import {ShoppingListItemsComponent} from './shopping-list-items/shopping-list-it
 import {AuthenticationSectionComponent} from './authenticationSection/authenticationSection.component';
 import {AuthenticationSectionGuard} from './authenticationSection/authenticationSection.guard';
 import {AdminComponent} from './admin/admin.component';
-import {ProductFunctionalityComponent} from './admin/productFunctionality/productFunctionality.component';
 import {ProductEditComponent} from './products/product-edit/product-edit.component';
 import {ProductStartComponent} from './products/productStart/productStart.component';
 import {ProductDetailComponent} from './products/product-detail/product-detail.component';
 import {ProductResolverService} from './products/product-resolver.service';
+import {GraphSectionComponent} from './admin/graph-section/graph-section.component';
+import {StatisticComponent} from './admin/graph-section/statistic/statistic.component';
+import {BarGraphComponent} from './admin/graph-section/bar-graph/bar-graph.component';
+import {PieGraphComponent} from './admin/graph-section/pie-graph/pie-graph.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/products', pathMatch: 'full'},
@@ -23,19 +26,22 @@ const appRoutes: Routes = [
       {
         path: ':id',
         component: ProductDetailComponent,
-        resolve: [ProductsResolverService]
+        resolve: [ProductResolverService]
       },
       {
         path: ':id/edit',
         component: ProductEditComponent,
-        resolve: [ProductsResolverService]
+        resolve: [ProductResolverService]
       }
     ]
   },
   { path: 'shopping-list-items', component: ShoppingListItemsComponent },
   { path: 'authenticationSection', component: AuthenticationSectionComponent },
-  { path: 'adminSection', component: AdminSectionComponent},
+  { path: 'adminSection', component: AdminComponent},
   { path: 'graph-section', component: GraphSectionComponent },
+  { path: 'statistic', component: StatisticComponent},
+  { path: 'bar-graph', component: BarGraphComponent},
+  { path: 'pie-graph', component: PieGraphComponent},
   {
     path: 'admin-edit',
     component: ProductsComponent,
@@ -46,12 +52,12 @@ const appRoutes: Routes = [
       {
         path: ':id',
         component: ProductDetailComponent,
-        resolve: [ProductsResolverService]
+        resolve: [ProductResolverService]
       },
       {
         path: ':id/edit',
         component: ProductEditComponent,
-        resolve: [ProductsResolverService]
+        resolve: [ProductResolverService]
       }
     ]
   }
