@@ -41,7 +41,7 @@ export class AuthenticationSectionComponent {
       authenticationObserver.subscribe(resData => {
         console.log(resData);
         this.loading = false;
-        this.router.navigate(['/products']);
+        this.router.navigate(['/products-main']);
       }, errorMessage => {
         console.log(errorMessage);
         this.error = errorMessage;

@@ -14,6 +14,7 @@ import {StatisticComponent} from './admin/graph-section/statistic/statistic.comp
 import {BarGraphComponent} from './admin/graph-section/bar-graph/bar-graph.component';
 import {PieGraphComponent} from './admin/graph-section/pie-graph/pie-graph.component';
 import {AdminSignupComponent} from './admin/admin-signup/admin-signup.component';
+import {ProductsMainComponent} from './products/products-main/products-main.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/products', pathMatch: 'full'},
@@ -44,6 +45,7 @@ const appRoutes: Routes = [
   { path: 'bar-graph', component: BarGraphComponent, canActivate: [AuthenticationSectionGuard]},
   { path: 'pie-graph', component: PieGraphComponent, canActivate: [AuthenticationSectionGuard]},
   { path: 'admin-signup', component: AdminSignupComponent, canActivate: [AuthenticationSectionGuard]},
+  { path: 'products-main', component: ProductsMainComponent, canActivate: [AuthenticationSectionGuard]},
   {
     path: 'admin-edit',
     component: ProductsComponent,

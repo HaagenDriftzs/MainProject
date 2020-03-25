@@ -33,6 +33,7 @@ import { StatisticComponent } from './admin/graph-section/statistic/statistic.co
 import { PieGraphComponent } from './admin/graph-section/pie-graph/pie-graph.component';
 import { BarGraphComponent } from './admin/graph-section/bar-graph/bar-graph.component';
 import { AdminSignupComponent } from './admin/admin-signup/admin-signup.component';
+import { ProductsMainComponent } from './products/products-main/products-main.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { AdminSignupComponent } from './admin/admin-signup/admin-signup.componen
     StatisticComponent,
     PieGraphComponent,
     BarGraphComponent,
-    AdminSignupComponent
+    AdminSignupComponent,
+    ProductsMainComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +78,7 @@ import { AdminSignupComponent } from './admin/admin-signup/admin-signup.componen
     TooltipService,
     PieSeriesService,
     AccumulationDataLabelService,
-    AccumulationLegendService
+    AccumulationLegendService,
   ],
   bootstrap: [AppComponent]
 })
